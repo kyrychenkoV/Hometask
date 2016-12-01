@@ -43,10 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarInShowrooms.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="Info.cs" />
-    <Compile Include="List.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

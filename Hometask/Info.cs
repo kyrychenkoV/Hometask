@@ -11,8 +11,8 @@ namespace Hometask
     public void InfoAutor()
     {
       var name = "Vitaliy";
-      var sorname = "Kyrychenko";
-      var info = name + " " + sorname;
+      var surname = "Kyrychenko";
+      var info = name + " " + surname;
       Console.WriteLine(info);
     }
   }

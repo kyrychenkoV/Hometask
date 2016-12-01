@@ -3,3 +3,4 @@ D:\Docs\Program files\Projects\Hometask\Hometask\bin\Release\Hometask.exe
 D:\Docs\Program files\Projects\Hometask\Hometask\bin\Release\Hometask.pdb
 D:\Docs\Program files\Projects\Hometask\Hometask\obj\Release\Hometask.exe
 D:\Docs\Program files\Projects\Hometask\Hometask\obj\Release\Hometask.pdb
+D:\Docs\Program files\Projects\Hometask\Hometask\obj\Release\Hometask.csprojResolveAssemblyReference.cache

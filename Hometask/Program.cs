@@ -6,20 +6,16 @@ using System.Threading.Tasks;
 
 namespace Hometask
 {
-  class Program
-  {
-    static void Main(string[] args)
-    {
-     
-        Menu one1 = new Menu();
-      
-      
-      while (true)
-      {
-        one1.MenuWrite();
-        one1.MenuCase();
-        }
-     
-    }
-  }
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Menu myMenu = new Menu();
+			while (true)
+			{
+				myMenu.MenuWrite();
+				myMenu.MenuCase();
+			}
+			}
+	}
 }
