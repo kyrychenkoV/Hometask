@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Hometask
 {
-  class Info
-  {
-    public void InfoAutor()
-    {
-      var name = "Vitaliy";
-      var surname = "Kyrychenko";
-      var info = name + " " + surname;
-      Console.WriteLine(info);
-    }
-  }
+	class Info
+	{
+		public void InfoAutor()
+		{
+			var name = "Vitaliy";
+			var surname = "Kyrychenko";
+			var info = name + " " + surname;
+			Console.WriteLine(info);
+		}
+	}
 }
