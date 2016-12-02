@@ -15,8 +15,12 @@ namespace Hometask
 	{
 		private int inputNumber;
 		public int count;
-		Car car = new Car();
+		
+
+		private bool result;
+		private int remove;
 		List<Car> carList = new List<Car>();
+		Car car = new Car();
 		public void MenuWrite()
 		{
 			Console.ForegroundColor = ConsoleColor.Green;
@@ -43,82 +47,112 @@ namespace Hometask
 				Console.Clear();
 			}
 		}
+
 		public void MenuCase()
 		{
+			Console.Clear();
 			switch (inputNumber)
 			{
 				case 1:
-					Console.Clear();
-					car.CreateCar();
-					carList.Add(car);
-					count++;
-					Console.Clear();
+					CreateCare();
 					break;
 				case 2:
-					Console.Clear();
-					if (count > 0)
-					{
-						Console.WriteLine("Created car:" + count + "\nWhat car you want to remove ?" +
-															"\nPlease input number car (starting with 0): ");
-						int remove;
-						bool b = true;
-						do
-						{
-							remove = Convert.ToInt32(Console.ReadLine());
-							if (remove >= 0 && remove < count)
-							{
-								carList.RemoveAt(remove);
-								count--;
-								b = false;
-								break;
-							}
-							else
-							{
-								Console.WriteLine("Try again input number with 0 to {0}", count - 1);
-							}
-						} while (b);
-					}
-					if (count == 0)
-					{
-						Console.WriteLine("Not Buy car");
-					}
-					Console.Clear();
+					DeleteCar();
 					break;
 				case 3:
 					Environment.Exit(0);
 					break;
 				case 4:
-					Console.Clear();
-					Info autor = new Info();
-					autor.InfoAutor();
-					Console.ReadKey();
-					Console.Clear();
+					InfoAutor();
 					break;
 				case 5:
-					Console.Clear();
-					if (carList.Count == 0)
-					{
-						Console.WriteLine("No Car");
-					}
-					foreach (Car list in carList)
-					{
-						Console.ForegroundColor = ConsoleColor.Cyan;
-						Console.WriteLine("=================");
-						Console.ResetColor();
-						car.PrintCar();
-						Console.ForegroundColor = ConsoleColor.Cyan;
-						Console.WriteLine("=================");
-						Console.ResetColor();
-					}
+					ShowAllCar();
 					Console.ReadKey();
-					Console.Clear();
 					break;
 				default:
 					Console.Clear();
 					break;
 			}
+			Console.Clear();
 		}
 
+		private void CreateCare()
+		{
+			car.CreateCar();
+			carList.Add(car);
+			count++;
+		}
 
+		private void DeleteCar()
+		{
+			if (count > 0)
+			{
+				inputNumber = 0;
+				Console.WriteLine("Created car:" + count + "\nWhat car you want to remove ?" +
+													"\nPlease input number car (starting with 0): ");
+				bool b = true;
+				do
+				{
+					do
+						{
+							result = (Int32.TryParse(Console.ReadLine(), out inputNumber));
+							if (result)
+							{
+								remove = inputNumber;
+							}
+						} while (!result);
+					
+					if (remove >= 0 && remove < count)
+					{
+						carList.RemoveAt(remove);
+						count--;
+						b = false;
+						break;
+					}
+					else
+					{
+						Console.WriteLine("Try again input number with 0 to {0}", count - 1);
+					}
+				} while (b);
+			}
+			if (count == 0)
+			{
+				Console.WriteLine("Not Buy car");
+			}
+
+		}
+
+		private void InfoAutor()
+		{
+			Info autor = new Info();
+			autor.InfoAutor();
+			Console.ReadKey();
+		}
+
+		private void ShowAllCar()
+		{
+			int[] ask = new int [10];
+			foreach (int a in ask)
+			{
+				ask[a] = 1 + 12;
+			}
+
+			if (carList.Count == 0)
+			{
+				Console.WriteLine("No Car");
+			}
+			foreach (Car list in carList)
+			{
+				Console.ForegroundColor = ConsoleColor.Cyan;
+				Console.WriteLine("=================");
+				Console.ResetColor();
+				car.PrintInfoCar();
+				Console.ForegroundColor = ConsoleColor.Cyan;
+				Console.WriteLine("=================");
+				Console.ResetColor();
+			}
+			Console.ReadKey();
+
+		}
 	}
 }

@@ -16,6 +16,6 @@ namespace Hometask
 				myMenu.MenuWrite();
 				myMenu.MenuCase();
 			}
-			}
+		}
 	}
 }

@@ -6,23 +6,24 @@ using System.Threading.Tasks;
 
 namespace Hometask
 {
-	class Car
+	class Car:Factory
 	{
 		private string salonName;
-		private string buyDate;
-		private string brand;
-		private string model;
-		private int cost;
-		private int speed;
+		public string buyDate;
+		public int cost;
+		public int digit;
 
-		private int digit;
-		public void CreateCar()
+		public string brand;
+		public string model;
+		public int speed;
+
+		public  override void CreateCar()
 		{
 			Console.Write("Input brand car:");
 			brand = Convert.ToString(Console.ReadLine());
 			Console.Write("Input model car:");
 			model = Convert.ToString(Console.ReadLine());
-			do  
+			do
 			{
 				Console.Write("Input cost car:");
 			} while (!CheckDigit());
@@ -37,7 +38,7 @@ namespace Hometask
 			Console.Write("Input paydate:");
 			buyDate = Convert.ToString(Console.ReadLine());
 		}
-		public void PrintCar()
+		public  override void PrintInfoCar()
 		{
 			Console.WriteLine("Brand name:" + brand);
 			Console.WriteLine("Model:" + model);
