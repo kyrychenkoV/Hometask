@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Hometask
 {
-	class Program
+	public class  Program
 	{
-		static void Main(string[] args)
+		private static void Main(string[] args)
 		{
-			Menu myMenu = new Menu();
+			var myMenu = new Menu();
 			while (true)
 			{
 				myMenu.MenuWrite();

@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Hometask
 {
+	
 
 	abstract class Factory
 	{
-		public abstract void CreateCar();
+		protected string brand;
+		public string model;
+		public int speed;
+		
 		public abstract void PrintInfoCar();
 	}
+
 }

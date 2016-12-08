@@ -13,11 +13,8 @@ namespace Hometask
 		public int cost;
 		public int digit;
 
-		public string brand;
-		public string model;
-		public int speed;
-
-		public  override void CreateCar()
+		
+	   public void CreateCar()
 		{
 			Console.Write("Input brand car:");
 			brand = Convert.ToString(Console.ReadLine());
@@ -49,7 +46,7 @@ namespace Hometask
 		}
 		public bool CheckDigit()
 		{
-			bool result = Int32.TryParse(Console.ReadLine(), out digit);
+			var result = int.TryParse(Console.ReadLine(), out digit);
 			return result;
 		}
 	}

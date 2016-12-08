@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Hometask
-{
-	class Info
+{	
+	 class Info
 	{
-		public void InfoAutor()
+	public void InfoAutor()
 		{
-			var name = "Vitaliy";
+			string name = "Vitaliy";
 			var surname = "Kyrychenko";
 			var info = name + " " + surname;
 			Console.WriteLine(info);
